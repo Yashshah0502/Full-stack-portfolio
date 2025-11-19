@@ -1,13 +1,34 @@
-// Shared types for the full-stack portfolio application
-
-export interface HealthResponse {
-  status: string
-  service: string
+export interface HealthStatus {
+  status: string;
+  service: string;
+  timestamp: string;
 }
 
-export interface ApiError {
-  message: string
-  code?: string
+export interface Node {
+  id: number;
+  title: string;
+  description?: string;
+  technologies: string[];
+  demoURL?: string;
+  createdAt: string;
 }
 
-// Add more shared types here as your application grows
+export type CardColumn = "Upcoming" | "In-Progress" | "Completed";
+
+export interface Card {
+  id: number;
+  title: string;
+  column: CardColumn;
+  nodeId?: number | null;
+  position: number;
+}
+
+export type AnalyticsEventType = "nodeClick" | "cardMove" | "themeChange";
+
+export interface AnalyticsEvent {
+  id: number;
+  eventType: AnalyticsEventType | string;
+  userSessionId?: string;
+  timestamp: string;
+  details?: Record<string, unknown>;
+}

@@ -17,5 +17,8 @@
     "start:backend": "npm --workspace apps/backend run start",
     "preview:frontend": "npm --workspace apps/frontend run preview",
     "install:all": "npm install && npm install --workspace apps/backend && npm install --workspace apps/frontend && npm install --workspace packages/common-types"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0"
   }
 }
