@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 import pool from "../config/db";
 import { Node } from "@isu/common-types";
+=======
+import pool from "../config/db.js";
+import type { Node } from "@isu/common-types";
+>>>>>>> Stashed changes
 
 export async function getNodes(): Promise<Node[]> {
   const res = await pool.query(

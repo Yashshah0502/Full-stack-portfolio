@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 import pool from "../config/db";
 import { Card } from "@isu/common-types";
+=======
+import pool from "../config/db.js";
+import type { Card } from "@isu/common-types";
+>>>>>>> Stashed changes
 
 export async function getCards(): Promise<Card[]> {
   const res = await pool.query(
