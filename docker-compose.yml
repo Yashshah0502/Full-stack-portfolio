@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: isu_postgres
+    environment:
+      POSTGRES_USER: isu_user
+      POSTGRES_PASSWORD: isu_password
+      POSTGRES_DB: isu_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: isu_redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  pg_data:
