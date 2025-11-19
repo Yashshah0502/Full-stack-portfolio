@@ -4,6 +4,9 @@ import { Node } from "@isu/common-types";
 =======
 import pool from "../config/db.js";
 import type { Node } from "@isu/common-types";
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 export async function getNodes(): Promise<Node[]> {

@@ -14,7 +14,10 @@
   "dependencies": {
     "@isu/common-types": "0.0.0",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "body-parser": "^2.2.0",
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "cors": "^2.8.5",
