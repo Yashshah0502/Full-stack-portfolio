@@ -1,0 +1,21 @@
+{
+  "name": "full-stack-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/backend",
+    "apps/frontend",
+    "packages/common-types"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace apps/backend run dev",
+    "dev:frontend": "npm --workspace apps/frontend run dev",
+    "build:backend": "npm --workspace apps/backend run build",
+    "build:frontend": "npm --workspace apps/frontend run build",
+    "build:types": "npm --workspace packages/common-types run build",
+    "build": "npm run build:types && npm run build:backend && npm run build:frontend",
+    "start:backend": "npm --workspace apps/backend run start",
+    "preview:frontend": "npm --workspace apps/frontend run preview",
+    "install:all": "npm install && npm install --workspace apps/backend && npm install --workspace apps/frontend && npm install --workspace packages/common-types"
+  }
+}
