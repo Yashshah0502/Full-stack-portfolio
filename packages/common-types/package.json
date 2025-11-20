@@ -1,13 +1,6 @@
 {
   "name": "@isu/common-types",
   "version": "0.0.0",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-  "type": "module",
->>>>>>> Stashed changes
   "description": "Shared TypeScript types for frontend and backend",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
