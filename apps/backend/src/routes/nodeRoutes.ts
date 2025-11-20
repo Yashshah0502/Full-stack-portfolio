@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { requireAdmin } from "../middleware/auth.js";
-import { getNodes, getNode, createNode, updateNode, deleteNode } from "../db/nodeRepo.js";
+import { requireAdmin } from "../middleware/auth";
+import { getNodes, getNode, createNode, updateNode, deleteNode } from "../db/nodeRepo";
 
 const router = Router();
 

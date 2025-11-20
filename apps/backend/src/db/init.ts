@@ -1,10 +1,9 @@
-import pool from "../config/db.js";
+import pool from "../config/db";
 
 export async function initDb() {
   try {
     console.log("Initializing database schema...");
 
-    // Create health_check table
     await pool.query(`
       CREATE TABLE IF NOT EXISTS health_check (
         id SERIAL PRIMARY KEY,
@@ -12,7 +11,6 @@ export async function initDb() {
       )
     `);
 
-    // Create nodes table
     await pool.query(`
       CREATE TABLE IF NOT EXISTS nodes (
         id SERIAL PRIMARY KEY,
@@ -24,17 +22,12 @@ export async function initDb() {
       )
     `);
 
-    // Create card_column enum type (skip if exists)
     try {
       await pool.query(`CREATE TYPE card_column AS ENUM ('Upcoming', 'In-Progress', 'Completed')`);
     } catch (err: any) {
-      if (err.code !== '42710') { // duplicate_object error code
-        throw err;
-      }
-      // Type already exists, ignore
+      if (err.code !== '42710') throw err;
     }
 
-    // Create cards table
     await pool.query(`
       CREATE TABLE IF NOT EXISTS cards (
         id SERIAL PRIMARY KEY,
@@ -45,7 +38,6 @@ export async function initDb() {
       )
     `);
 
-    // Create analytics_events table
     await pool.query(`
       CREATE TABLE IF NOT EXISTS analytics_events (
         id SERIAL PRIMARY KEY,

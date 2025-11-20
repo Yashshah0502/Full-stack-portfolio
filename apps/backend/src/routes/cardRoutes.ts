@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { requireAdmin } from "../middleware/auth.js";
-import { getCards, createCard, updateCard, deleteCard } from "../db/cardRepo.js";
+import { requireAdmin } from "../middleware/auth";
+import { getCards, createCard, updateCard, deleteCard } from "../db/cardRepo";
 
 const router = Router();
 

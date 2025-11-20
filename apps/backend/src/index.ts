@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { initDb } from "./db/init.js";
-import nodeRoutes from "./routes/nodeRoutes.js";
-import cardRoutes from "./routes/cardRoutes.js";
+import { initDb } from "./db/init";
+import nodeRoutes from "./routes/nodeRoutes";
+import cardRoutes from "./routes/cardRoutes";
 
 dotenv.config();
 
@@ -18,7 +18,6 @@ app.get("/api/health", (_req, res) => {
     timestamp: new Date().toISOString()
   });
 });
-
 
 app.use("/api/cards", cardRoutes);
 app.use("/api/nodes", nodeRoutes);
